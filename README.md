@@ -1,30 +1,48 @@
-💬 E-commerce Chatbot
-This project is an intelligent chatbot for an e-commerce website. It's built to understand what a user is asking for and give them the right answer. The bot connects to a database in real time to make sure its information is always correct and up-to-date.
+# 🛍️ Smart E-commerce Chatbot
 
-What the Bot Can Do
-The chatbot can handle two main types of questions:
+Welcome to the **e-commerce chatbot**\! This project is an intelligent chatbot designed to help users on an e-commerce platform. It can understand what a user wants to do and gives them accurate, up-to-date answers.
 
-FAQs (Frequently Asked Questions): This is for when people ask about the store's policies or general information, like "Do you accept online payments?"
+I built this chatbot using a **Gen AI RAG** (Retrieval-Augmented Generation) system with **Llama3.3** and **Groq**. It gets real-time information by connecting to the platform's database.
 
-Product Questions: This is for when people want to find products. The bot can search the database in real time for specific items. For example, "Show me all Nike shoes under Rs. 3000."
+-----
 
-How to Get Started
-1. Set Up the Project
-To get the project ready, you need to install all the necessary files. You can do this by running a single command:
+### Key Features ⚡️
 
-Bash
+This chatbot can handle two main types of requests:
 
-pip install -r app/requirements.txt
-2. Add Your Groq Credentials
-Inside the app folder, you need to create a new file named .env. In this file, you'll add your personal Groq API key and the name of the model you want to use.
+  * **🗣️ FAQ:** For general questions about store policies, like "Is online payment available?" or "What's the return policy?"
+  * **🔍 SQL:** For questions that need a real-time product search, like "Show me all Nike shoes under Rs. 3000."
 
-Plaintext
+Here's a look at the chatbot in action:
 
-GROQ_MODEL=<Add the model name, e.g. llama-3.3-70b-versatile>
-GROQ_API_KEY=<Add your groq api key here>
-3. Run the App
-After you've completed the steps above, you can start the chatbot by running this command:
+-----
 
-Bash
+### Architecture
 
-streamlit run app/main.py
+This diagram shows how the chatbot works behind the scenes.
+
+-----
+
+### Quick Start 🚀
+
+It's easy to get this project up and running. Just follow these three simple steps:
+
+1.  **Install Dependencies:**
+    Run this command in your terminal to install all the required libraries:
+    ```bash
+    pip install -r app/requirements.txt
+    ```
+2.  **Add Your API Key:**
+    Inside the `app` folder, create a file named `.env` and add your Groq credentials:
+    ```text
+    GROQ_MODEL=<Add the model name, e.g. llama-3.3-70b-versatile>
+    GROQ_API_KEY=<Add your groq api key here>
+    ```
+3.  **Run the App:**
+    Finally, launch the chatbot with this command:
+    ```bash
+    streamlit run app/main.py
+    ```
+
+-----
+
