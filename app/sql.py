@@ -7,6 +7,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 from pandas import DataFrame
 
+"""
+In thatif user ask any question related to SQL then it will route to sql.py file
+then it generate answer. We have product store in the sqlite database.
+It retrieve the data from the database and then it will generate the answer.
+"""
+
 load_dotenv()
 
 GROQ_MODEL = os.getenv('GROQ_MODEL')

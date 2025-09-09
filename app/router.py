@@ -1,12 +1,18 @@
 from semantic_router import Route, RouteLayer
 from semantic_router.encoders import HuggingFaceEncoder
 
+"""
+The function is use for routing purpose
+means user queri is related to which topic.In that we have to define the topics.
+For example FAQ,SQL etc. and then we have to define the utterances for each topic.
+"""
 encoder = HuggingFaceEncoder(
     name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
 faq = Route(
     name='faq',
+    # If this utterance is present in the user query then it will route to faq topic.
     utterances=[
         "What is the return policy of the products?",
         "Do I get discount with the HDFC credit card?",
