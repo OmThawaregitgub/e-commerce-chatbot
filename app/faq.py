@@ -1,25 +1,28 @@
 import os
-
 import chromadb
 from chromadb.utils import embedding_functions
 from groq import Groq
 import pandas
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
 
-ef = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name='sentence-transformers/all-MiniLM-L6-v2'
-        )
+@st.cache_resource
+def get_embedding_function():
+    return embedding_functions.SentenceTransformerEmbeddingFunction(
+        model_name='sentence-transformers/all-MiniLM-L6-v2'
+    )
 
-chroma_client = chromadb.Client()
-groq_client = Groq()
-collection_name_faq = 'faqs'
-
+@st.cache_resource
 def get_chroma_client():
     return chromadb.Client()
 
+ef = get_embedding_function()
+chroma_client = get_chroma_client()
+groq_client = Groq()
+collection_name_faq = 'faqs'
 
 # Take path of csv file and inject that in vector database.
 def ingest_faq_data(path):
