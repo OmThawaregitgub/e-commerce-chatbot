@@ -1,4 +1,5 @@
-from semantic_router import Route, RouteLayer
+from semantic_router import Route
+from semantic_router.routers import SemanticRouter
 from semantic_router.encoders import HuggingFaceEncoder
 
 """
@@ -33,7 +34,7 @@ sql = Route(
     ]
 )
 
-router = RouteLayer(routes=[faq, sql], encoder=encoder)
+router = SemanticRouter(routes=[faq, sql], encoder=encoder)
 
 if __name__ == "__main__":
     print(router("What is your policy on defective product?").name)
