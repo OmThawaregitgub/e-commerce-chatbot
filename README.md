@@ -15,7 +15,7 @@ This chatbot can handle two main types of requests:
 
 Here's a look at the chatbot in action:
 
-**\_*****[]*****\_**
+**\_*****<img width="1221" height="881" alt="Image" src="https://github.com/user-attachments/assets/f590e616-38d0-4a37-9dac-2957656835b5" />*****\_**
 
 -----
 
