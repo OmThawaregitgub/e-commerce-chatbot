@@ -15,7 +15,7 @@ This chatbot can handle two main types of requests:
 
 Here's a look at the chatbot in action:
 
-**\_*****[product-ss.png]*****\_**
+**\_*****[<img width="2320" height="856" alt="Image" src="https://github.com/user-attachments/assets/41de2aef-962f-4896-8622-c7d09b976df1" />]*****\_**
 
 -----
 
