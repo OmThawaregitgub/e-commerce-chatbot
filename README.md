@@ -1,4 +1,4 @@
-# 🛍️ Smart E-commerce Chatbot
+### 🛍️ Smart E-commerce Chatbot
 
 Welcome to the **e-commerce chatbot**\! This project is an intelligent chatbot designed to help users on an e-commerce platform. It can understand what a user wants to do and gives them accurate, up-to-date answers.
 
@@ -15,11 +15,15 @@ This chatbot can handle two main types of requests:
 
 Here's a look at the chatbot in action:
 
+**\_*****[product-ss.png]*****\_**
+
 -----
 
 ### Architecture
 
 This diagram shows how the chatbot works behind the scenes.
+
+**\_*****[architecture-diagram.png]*****\_**
 
 -----
 
@@ -33,7 +37,7 @@ It's easy to get this project up and running. Just follow these three simple ste
     pip install -r app/requirements.txt
     ```
 2.  **Add Your API Key:**
-    Inside the `app` folder, create a file named `.env` and add your Groq credentials:
+    Inside the `app` folder, create a file named `.env`. In this file, you must add your Groq credentials, including your secret key.
     ```text
     GROQ_MODEL=<Add the model name, e.g. llama-3.3-70b-versatile>
     GROQ_API_KEY=<Add your groq api key here>
@@ -46,3 +50,6 @@ It's easy to get this project up and running. Just follow these three simple ste
 
 -----
 
+### Copyright
+
+© 2025 Om Thaware. All rights reserved.
