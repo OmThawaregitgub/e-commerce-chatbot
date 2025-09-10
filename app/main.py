@@ -3,7 +3,7 @@ import sys
 __import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
-from faq import ingest_faq_data, faq_chainfrom sql import sql_chain
+from faq import ingest_faq_data, faq_chain
 from pathlib import Path
 
 # The semantic router code will be modified to accept the client and encoder
