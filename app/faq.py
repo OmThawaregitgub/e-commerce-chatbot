@@ -17,6 +17,10 @@ chroma_client = chromadb.Client()
 groq_client = Groq()
 collection_name_faq = 'faqs'
 
+def get_chroma_client():
+    return chromadb.Client()
+
+
 # Take path of csv file and inject that in vector database.
 def ingest_faq_data(path):
     # It check the collection exist or not, if not then create a new collection and ingest the data.
