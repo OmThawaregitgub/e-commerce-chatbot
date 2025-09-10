@@ -7,8 +7,14 @@ from sql import sql_chain
 from pathlib import Path
 from router import router
 
-faqs_path = Path(__file__).parent / "resources/faq_data.csv"
-ingest_faq_data(faqs_path)
+# Wrap the data ingestion function with Streamlit's caching decorator.
+# This ensures the data is only ingested once, improving performance.
+@st.cache_resource
+def load_faq_data():
+    faqs_path = Path(__file__).parent / "resources/faq_data.csv"
+    ingest_faq_data(faqs_path)
+
+load_faq_data()
 
 
 def ask(query):
@@ -40,5 +46,3 @@ if query:
     with st.chat_message("assistant"):
         st.markdown(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
-
-
