@@ -1,30 +1,19 @@
 import os
+
 import chromadb
 from chromadb.utils import embedding_functions
 from groq import Groq
 import pandas
 from dotenv import load_dotenv
-import streamlit as st
 
 load_dotenv()
 
-# We use Streamlit's caching decorator to ensure this embedding function is only
-# created once per deployment, saving resources.
-@st.cache_resource
-def get_embedding_function():
-    return embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name='sentence-transformers/all-MiniLM-L6-v2'
-    )
 
-# We use Streamlit's caching decorator to ensure this ChromaDB client is only
-# created once per deployment, improving performance.
-@st.cache_resource
-def get_chroma_client():
-    return chromadb.Client()
+ef = embedding_functions.SentenceTransformerEmbeddingFunction(
+            model_name='sentence-transformers/all-MiniLM-L6-v2'
+        )
 
-# Get the cached instances of the client and embedding function
-ef = get_embedding_function()
-chroma_client = get_chroma_client()
+chroma_client = chromadb.Client()
 groq_client = Groq()
 collection_name_faq = 'faqs'
 
