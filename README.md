@@ -15,7 +15,7 @@ This chatbot can handle two main types of requests:
 
 Here's a look at the chatbot in action:
 
-**\_*****[<img width="2320" height="856" alt="Image" src="https://github.com/user-attachments/assets/41de2aef-962f-4896-8622-c7d09b976df1" />]*****\_**
+**\_*****[]*****\_**
 
 -----
 
@@ -23,7 +23,7 @@ Here's a look at the chatbot in action:
 
 This diagram shows how the chatbot works behind the scenes.
 
-**\_*****[architecture-diagram.png]*****\_**
+**\_*****<img width="2320" height="856" alt="Image" src="https://github.com/user-attachments/assets/41de2aef-962f-4896-8622-c7d09b976df1" />*****\_**
 
 -----
 
